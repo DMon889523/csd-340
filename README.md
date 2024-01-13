@@ -3,7 +3,7 @@
 
 # H2 Contributors
 
--Joseph Issa
+- Joseph Issa
 
 
--Dominique Monroe
+- Dominique Monroe

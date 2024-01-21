@@ -1,1 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+}
 
+#container {
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+div[style^="width: 45%"] {
+    width: 45%;
+}
+
+div[style^="width: 100%"] {
+    width: 100%;
+    margin-top: 60%;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: inside decimal;
+    list-style-position: inside;
+    font-weight: 300;
+}
+
+ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: upper-roman;
+    list-style-position: inside;
+    font-weight: 300;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div[style^="width: 100%; margin-top: 60%;"] {
+    float: right;
+    margin-bottom: 20px;
+}

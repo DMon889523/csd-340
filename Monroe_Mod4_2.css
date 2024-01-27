@@ -1,1 +1,36 @@
+/* CSS Grid with three columns */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Margin-top for image-gallery div */
+.image-gallery {
+  margin-top: 10%;
+}
+
+/* Centering h1 text */
+h1 {
+  text-align: center;
+  color: rgba(255, 0, 0, 0.8); /* Red color with 80% opacity */
+}
+
+/* Centering h3 text */
+h3 {
+  text-align: center;
+  color: rgba(0, 128, 0, 0.8); /* Green color with 80% opacity */
+}
+
+/* Centering figure tag text */
+figure {
+  text-align: center;
+}
+
+/* Italic font style and font-size for figcaption */
+figcaption {
+  font-style: italic;
+  font-size: 0.75em;
+  color: rgba(0, 0, 255, 0.8); /* Blue color with 80% opacity */
+}
 

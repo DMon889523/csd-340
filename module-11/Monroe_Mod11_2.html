@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <p>This ia an interactive TO-Do List. Enter your item into the text box and then click "Add", to show items on list click "Display", and to delete an item simply click "Delete".</p>
+    <label for="dataInput">Enter Data:</label>
+    <input type="text" id="dataInput">
+    <button onclick="addData()">Add</button>
+    <button onclick="deleteLastEntry()">Delete Last Entry</button>
+    <button onclick="displayData()">Display</button>
+
+    <script>
+        // JavaScript section
+        let dataArray = [];
+
+        function addData() {
+            let inputData = document.getElementById('dataInput').value;
+            dataArray.push(inputData);
+            alert(`Data added: ${inputData}`);
+            document.getElementById('dataInput').value = ''; // Clear the input field
+        }
+
+        function deleteLastEntry() {
+            if (dataArray.length > 0) {
+                let deletedData = dataArray.pop();
+                alert(`Deleted last entry: ${deletedData}`);
+            } else {
+                alert('Array is empty, nothing to delete.');
+            }
+        }
+
+        function displayData() {
+            if (dataArray.length > 0) {
+                let displayText = '';
+                for (let i = 0; i < dataArray.length; i++) {
+                    displayText += `${i + 1}. ${dataArray[i]}\n`;
+                }
+                alert(`Array Contents:\n${displayText}`);
+            } else {
+                alert('Array is empty, nothing to display.');
+            }
+        }
+    </script>
+</body>
+
+</html>
 

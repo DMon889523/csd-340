@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" type="text/css" href="LastName_Mod3_3.css">
+</head>
+<body>
+    <div id="container">
+        <h1 style="text-align: center;">Assignment 12.2: JavaScript - Part 4</h1>
+
+        <div style="display: flex;">
+            <div style="width: 45%;">
+                <h3>Top 10 Favorite Books</h3>
+                <ol id="bookList">
+                    <li>Jungle Book</li>
+                    <li>The Martian</li>
+                    <li>Reckless</li>
+                    <li>Harry Potter</li>
+                    <li>Seafire</li>
+                    <li>Davinci Code</li>
+                    <li>Angels and Demons</li>
+                    <li>Bloodline</li>
+                    <li>Throne of Jade</li>
+                    <li>Black Powder War</li>
+                    <!-- Add more items as needed -->
+                </ol>
+            </div>
+
+            <div style="width: 45%;">
+                <h3>5 Things I’ve Learned Since the Course Started</h3>
+                <ul>
+                    <li>Time Management</li>
+                    <li>HTML Process</li>
+                    <li>CSS Process</li>
+                    <li>Working w/ GitHub</li>
+                    <li>Verifying my work</li>
+                    <!-- Add more items as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <div style="width: 100%; margin-top: 60%;">
+            <button onclick="sortAscending()">Top to Bottom</button>
+            <button onclick="sortDescending()">Bottom to Top</button>
+            <a href="sam.html" style="float: right;">Back to Landing Page</a>
+        </div>
+    </div>
+
+    <script>
+        const bookTitles = [
+            "Jungle Book",
+            "The Martian",
+            "Reckless",
+            "Harry Potter",
+            "Seafire",
+            "Davinci Code",
+            "Angels and Demons",
+            "Bloodline",
+            "Throne of Jade",
+            "Black Powder War"
+            // Add more items as needed
+        ];
+
+        function sortAscending() {
+            const sortedBooks = [...bookTitles].sort();
+            displayBooks(sortedBooks);
+        }
+
+        function sortDescending() {
+            const sortedBooks = [...bookTitles].sort().reverse();
+            displayBooks(sortedBooks);
+        }
+
+        function displayBooks(books) {
+            const bookList = document.getElementById("bookList");
+            bookList.innerHTML = "";
+            books.forEach(book => {
+                const listItem = document.createElement("li");
+                listItem.textContent = book;
+                bookList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>
 
